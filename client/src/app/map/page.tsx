@@ -58,8 +58,8 @@ const GoogleMapsComponent = () => {
                         center: currentLocation,
                         zoom: 13,
                     });
-
                     // 지도 클릭 이벤트 리스너 추가
+                    //@ts-ignore
                     map.addListener('click', async (event: google.maps.MapMouseEvent) => {
                         console.log(event, '<event');
                         if (event.placeId) {
