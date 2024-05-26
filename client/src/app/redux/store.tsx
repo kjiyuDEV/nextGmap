@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import createSagaMiddleware from 'redux-saga'; // redux-saga를 생성하기 위한 라이브러리
 import localStorage from 'redux-persist/es/storage';
 import rootSaga from './sagas';
-import { modalReducer } from './reducers/modal';
+import { modalReducer } from './reducers/Modal';
 
 const authInfo = {
     key: 'authInfo',
