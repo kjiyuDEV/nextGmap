@@ -71,11 +71,11 @@ const PlaceDetailModal = () => {
             <div className="address">{datas.formattedAddress}</div>
             <ImageList sx={{ width: '100%', height: '17rem' }} cols={2} rowHeight={164}>
                 {!imgUrls ? (
-                    <Image alt="no image" src="https://blogjiyu.s3.ap-northeast-2.amazonaws.com/upload//%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7+2024-05-25+164551.png" />
+                    <Image width={140} height={100} alt="no image" src="https://blogjiyu.s3.ap-northeast-2.amazonaws.com/upload//%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7+2024-05-25+164551.png" />
                 ) : (
                     imgUrls.map((v, i) => (
                         <ImageListItem key={i}>
-                            <Image key={i} alt="place's image" style={{ height: '100%' }} src={v} />
+                            <Image layout="fill" quality={100} key={i} alt="place's image" style={{ height: '100%' }} src={v} />
                         </ImageListItem>
                     ))
                 )}
