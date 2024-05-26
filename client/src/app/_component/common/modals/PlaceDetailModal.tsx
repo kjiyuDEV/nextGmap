@@ -85,7 +85,9 @@ const PlaceDetailModal = () => {
                     <div className={datas.regularOpeningHours.openNow ? 'open' : 'close'}>{datas.regularOpeningHours.openNow ? '영업중' : '영업종료'}</div>
                     <ul className="open-description">
                         {datas.regularOpeningHours.weekdayDescriptions.map((v, i) => (
-                            <li className={`open-day ${i === moment().day() ? 'on' : ''}`}>{v}</li>
+                            <li className={`open-day ${i === moment().day() ? 'on' : ''}`} key={i}>
+                                {v}
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -96,7 +98,7 @@ const PlaceDetailModal = () => {
                     <div>
                         이 장소는 <span>지유마스터</span>님이 추천한 장소에요!
                     </div>
-                    <div className="comment">"한국에서 젤 맛있게 먹은 장어덮밥집"</div>
+                    <div className="comment">한국에서 젤 맛있게 먹은 장어덮밥집</div>
                 </div>
                 <button>가고 싶어요</button>
             </div>
