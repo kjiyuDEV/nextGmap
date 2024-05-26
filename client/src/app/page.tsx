@@ -9,9 +9,9 @@ import { useRouter } from 'next/navigation';
 export default function Home() {
     const router = useRouter();
     interface FormState {
-        userId: string | null;
-        password: string | null;
-        name: string | null;
+        userId: string;
+        password: string;
+        name: string;
     }
 
     const [form, setForm] = useState<FormState>({
